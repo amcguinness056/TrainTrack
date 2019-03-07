@@ -13,12 +13,8 @@ public class TrainAProcess extends Thread {
     public void run() {   // start train Process
         // wait for clearance before moving on to the track
         theTrack.trainA_MoveOnToTrack(trainName); // move on to track A
-        int circuitCount = 0;
-        while (circuitCount < 5) { // keep cycling the A track loop
-            theTrack.trainA_MoveAroundToSharedTrack(trainName); // move around A loop
-            theTrack.trainA_MoveAlongSharedTrack(trainName); // move along shared track
-            circuitCount++;
-        }
+        theTrack.trainA_MoveAroundToSharedTrack(trainName); // move around A loop
+       // theTrack.trainAMoveAcrossJunction(trainName); // move across junction
         theTrack.trainA_MoveOffTrack(trainName); // move off the track */
     } // end run
 

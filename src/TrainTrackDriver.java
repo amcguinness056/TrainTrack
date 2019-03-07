@@ -2,8 +2,8 @@ public class TrainTrackDriver {
     // Note. You can assuming that trains approaching the track will
     // adhere to normal protocol.
 
-    static final int NUM_OF_A_TRAINS = 5;
-    static final int NUM_OF_B_TRAINS = 5;
+    static final int NUM_OF_A_TRAINS = 10;
+    static final int NUM_OF_B_TRAINS = 10;
     static TrainTrack theTrainTrack;
 
     public static void main(String[] args) {
@@ -40,14 +40,14 @@ public class TrainTrackDriver {
         for (int i = 0; i < NUM_OF_A_TRAINS; i++) {
             try {
                 trainAProcess[i].join();
-            } catch (InterruptedException ex) {
+            } catch (Exception ex) {
             }
         } // end for
 
         for (int i = 0; i < NUM_OF_B_TRAINS; i++) {
             try {
                 trainBProcess[i].join();
-            } catch (InterruptedException ex) {
+            } catch (Exception ex) {
             }
         } // end for
 

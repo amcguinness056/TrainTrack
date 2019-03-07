@@ -36,7 +36,7 @@ public class Activity {
 
     public void printActivities() {
         // print all the train activity history
-        System.out.println("TRAIN TRACK ACTIVITY(Tracks [0..16])");
+        System.out.println("TRAIN TRACK ACTIVITY(Tracks [0..21])");
         Iterator<String> iterator = theActivities.iterator();
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
@@ -45,13 +45,13 @@ public class Activity {
 
     // Utility method to represent the track as a string for printing/display
     public String trackString() {
-        String trackStateAsString = trainTrack[2] + trainTrack[3] + trainTrack[4] + "\n"
-                + trainTrack[1] + "    " + trainTrack[5] + "\n"
-                + trainTrack[0] + "    " + trainTrack[6] + "\n"
-                + trainTrack[9] + trainTrack[8] + trainTrack[7] + "\n"
-                + trainTrack[10] + "    " + trainTrack[16] + "\n"
-                + trainTrack[11] + "    " + trainTrack[15] + "\n"
-                + trainTrack[12] + trainTrack[13] + trainTrack[14] + "\n";
+        String trackStateAsString = "[XX]" + trainTrack[0] + trainTrack[1] + trainTrack[2] + "[XX]" + "\n"
+                + trainTrack[11] + "    " + "    " + "    " + trainTrack[3] + "\n"
+                + trainTrack[10] + "    " + "[XX]" + trainTrack[17] + trainTrack[4] + trainTrack[18] + "[XX]" + "\n"
+                + trainTrack[9] + "    " + trainTrack[16] + "    " + trainTrack[5] + "    " + trainTrack[19] + "\n"
+                + "[XX]" + trainTrack[8] + trainTrack[7] + trainTrack[6] + "[XX]" + "    " + trainTrack[20] + "\n"
+                + "    " + "    " + trainTrack[15] + "    " + "    " + "    " + trainTrack[21] + "\n"
+                + "    " + "    " + "[XX]" +  trainTrack[14] + trainTrack[13] + trainTrack[12] + "[XX]" + "\n";
         return (trackStateAsString);
     }// end trackString
 
